@@ -1,4 +1,4 @@
-package com.japan.admin.vo;
+package com.japan.admin.user.vo;
 
 import lombok.Data;
 
@@ -8,5 +8,9 @@ public class UserVO {
 
     private String username;
 
+    private String email;
+
     private String nickname;
+
+    private String avatar;
 }
