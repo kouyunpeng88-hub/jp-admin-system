@@ -2,3 +2,16 @@
 GET http://localhost:8080/api/user/2078112423691362306
 
 ###
+
+### POST request to example server
+### 注册用户
+POST http://localhost:8080/api/user/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "test001",
+  "password": "123456",
+  "email": "test001@test.com"
+}
+###
