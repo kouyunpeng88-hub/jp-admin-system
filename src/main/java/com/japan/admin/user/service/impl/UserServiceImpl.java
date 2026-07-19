@@ -6,6 +6,7 @@ import com.japan.admin.user.mapper.UserMapper;
 import com.japan.admin.user.service.UserService;
 import com.japan.admin.user.vo.UserVO;
 import lombok.RequiredArgsConstructor;
+import lombok.val;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,6 +26,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserVO getUser(Long id) {
-        return null;
+        SysUser user = userMapper.selectById(id);
+        UserVO userVO = new UserVO();
+        userVO.setId(user.getId());
+        userVO.setEmail(user.getEmail());
+        userVO.setAvatar(user.getAvatar());
+        userVO.setUsername(user.getUsername());
+        userVO.setNickname(user.getNickname());
+        return userVO;
     }
 }
